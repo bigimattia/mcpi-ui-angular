@@ -1,0 +1,32 @@
+.settings-component {
+  padding: 1rem;
+  background: #fff3e0;
+  border: 1px solid #ffb74d;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+.settings-component h3 {
+  margin: 0 0 0.5rem 0;
+  color: #e65100;
+}
+
+.settings-component p {
+  margin: 0.5rem 0;
+  color: #5d4037;
+}
+
+.settings-data {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.settings-data pre {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+

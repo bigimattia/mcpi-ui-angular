@@ -1,0 +1,23 @@
+.ui-renderer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mcp-widget-container {
+  width: 100%;
+  min-height: 50px;
+}
+
+.local-component-container {
+  width: 100%;
+  min-height: 50px;
+}
+
+/* Ensure ui-resource-renderer takes full width */
+ui-resource-renderer {
+  display: block;
+  width: 100%;
+}
+

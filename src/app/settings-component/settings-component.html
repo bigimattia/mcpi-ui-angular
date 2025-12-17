@@ -1,0 +1,16 @@
+<div class="settings-component">
+  @if (title) {
+    <h3>{{ title }}</h3>
+  }
+  @if (message) {
+    <p>{{ message }}</p>
+  }
+  @if (data) {
+    <div class="settings-data">
+      <pre>{{ data | json }}</pre>
+    </div>
+  }
+  @if (!title && !message && !data) {
+    <p>Settings Component</p>
+  }
+</div>

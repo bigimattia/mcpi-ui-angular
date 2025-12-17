@@ -1,1 +1,36 @@
-<app-ui-renderer [resource]="mcpResource"></app-ui-renderer>
+<div class="app-container">
+  <header>
+    <h1>{{ title() }}</h1>
+    <div class="controls">
+      <label>
+        <input
+          type="checkbox"
+          [checked]="useMultiple()"
+          (change)="useMultiple.set($any($event.target).checked)"
+        />
+        Use Multiple Widgets (Array)
+      </label>
+    </div>
+  </header>
+
+  <main>
+    @if (useMultiple()) {
+      <!-- Example: Multiple widgets as array -->
+      <section>
+        <h2>Multiple Widgets (Array Structure)</h2>
+        <p>
+          This demonstrates rendering multiple widgets from an array. The array can contain
+          both server-provided MCP widgets and local Angular components.
+        </p>
+        <app-ui-renderer [resource]="multipleResources"></app-ui-renderer>
+      </section>
+    } @else {
+      <!-- Example: Single widget -->
+      <section>
+        <h2>Single Widget</h2>
+        <p>This demonstrates rendering a single widget.</p>
+        <app-ui-renderer [resource]="singleResource"></app-ui-renderer>
+      </section>
+    }
+  </main>
+</div>

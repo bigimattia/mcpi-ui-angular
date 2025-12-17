@@ -1,1 +1,15 @@
-<p>ui-renderer works!</p>
+<div class="ui-renderer-container">
+  @for (resource of resources; track trackByIndex($index)) {
+    @if (isServerWidget(resource)) {
+      <!-- Server-provided MCP widget -->
+      <div class="mcp-widget-container" [attr.data-widget-index]="$index">
+        <ui-resource-renderer #uiRenderer [attr.data-resource-index]="$index"></ui-resource-renderer>
+      </div>
+    } @else if (isLocalComponent(resource)) {
+      <!-- Local Angular component -->
+      <div class="local-component-container" [attr.data-component-index]="$index">
+        <ng-container #componentHost></ng-container>
+      </div>
+    }
+  }
+</div>
